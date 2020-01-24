@@ -71,7 +71,9 @@
 
 ## Wireframes
 
-Display all wireframes here with any neccessary descriptions.
+![Home Wireframe](images/HomeWireframe.png)
+![Department Wireframe](images/DepartmentWireframe.png)
+![Art Details Wireframe](images/ArtDetailsWireframe.png)
 
 ### MVP
 
