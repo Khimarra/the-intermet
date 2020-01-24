@@ -130,12 +130,12 @@
 | API Calls | H | 3hrs | 0hrs | 0hrs |
 | Working with API | 10hrs | 0hrs | 0hrs |
 | Home Page | H | 4hrs| 0hrs | 0hrs |
-| Department Page | H | 4hrs| 0hrs | 0hrs |
-| Art Page | H | 4hrs| 0hrs | 0hrs |
-| Routing | H | 3hrs| 0hrs | 0hrs |
-| Styling | M | 10hrs| 0hrs | 0hrs |
-
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Department Page | M | 4hrs| 0hrs | 0hrs |
+| Art Page | M | 4hrs | 0hrs | 0hrs |
+| Routing | H | 3hrs | 0hrs | 0hrs |
+| Styling | M | 10hrs | 0hrs | 0hrs |
+| PostMVP | L | 0hrs | 0hrs | 0hrs |
+| Total | H | 38hrs| 0hrs | 0hrs |
 
 ## Project Schedule
 
