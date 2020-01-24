@@ -81,13 +81,23 @@
 
 - Get data from Met API
 - Make home page with a randomly generated image and title of art piece, one for each department (there are 20) 
-- Render data about specific art piece on separate page, linked from image
+- Make department page component, similar to home, but with links to specific pieces
+- Render data about specific art piece on separate page, linked from image on department page
+- Set up router so links actually link to things
+- Styling with at least one media query
 
 #### PostMVP EXAMPLE:
 
-- Add level between home page and art info where 10 randomly selected pieces from each department are displayed, make home page links go to department instead of specific info, these 10 pieces will link to their specific info.
 - Add search function so users can search through whole collection
+- Implement search function in each department page so users can search within each department
 - Update styling with SASS
+- Re-write class components as functional
+- Add local storage with list of links to recently viewed pieces
+- Make a loading bar for when things are taking too long to load
+- Add an external links section with links to the Met's website and the piece's specific URL
+- Add an aside to art page with links to additional images (if available)
+- Add an aside to department page with links to other departments
+
 
 ## React Component Hierarchy
 
@@ -95,26 +105,36 @@
 
 ## Components
 
-Based on the initial logic defined in the previous section, try to breakdown the logic further into stateless/stateful components. 
-
 | Component | Description |Type |
 | --- | --- | --- |
-| Header | The Header receives props that render multiple nav titles and links | Functional |
+| App | stateful, passes props to everything else, api calls (will use an api-helper file) | Class |
+| Header | Header will contain current page title and Nav link to Home | Functional |
+| Nav | The nav link housed in the Header, routes to Home | Functional |
+| Title | Page title housed in the header | Functional |
 | Main | This component houses multiple rendered views through React Router and controls data received from the initial API call in state | Class |
+| Art Details | Page that contains info about a specific art piece. Linked to from Department page | Class |
+| Art Button | Nav link that routes to Art Details | Functional |
+| Department Page | Contains info about specific department, contains Art Buttons, routed to from Department Buttons. | Class |
+| Department Button | Contains route info to link to each department page. Housed in Main. Receives props | Functional |
+| Footer | Footer with API credit | Functional |
+
 
 ## Priority Matrix
 
-Include an image of your Priority Matrix (X is time and Y is priority)
+![Component Heirarchy](images/PriorityMatrix.png)
 
 ## Timeframes
 
-Timeframes are key in the development cycle. You have limited time to code and so much to accomplish!  Look at all of your planned files and components, and all of the areas of development you are planning and give an estimate of how long each one will take to complete. It's always best to pad the time to account for the unknown, so be sure to add an additional hour or two to play it safe. As you progress, you can update the "Time Invested" column to keep track of your hours, but that number should turn into "Actual Time" by the presentation day. Also, put a winter-themed gif at the top of your readme before you pitch to show you read the instructions thoroughly.
-
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| API Calls | H | 3hrs | 0hrs | 0hrs |
+| Working with API | 10hrs | 0hrs | 0hrs |
+| Home Page | H | 4hrs| 0hrs | 0hrs |
+| Department Page | H | 4hrs| 0hrs | 0hrs |
+| Art Page | H | 4hrs| 0hrs | 0hrs |
+| Routing | H | 3hrs| 0hrs | 0hrs |
+| Styling | M | 10hrs| 0hrs | 0hrs |
+
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Project Schedule
@@ -126,9 +146,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |  Day | Deliverable | Status
 |---|---| ---|
 |Jan 24th| Project Pitch / Wireframes / Priority Matrix / Functional Components | Incomplete
-|Jan 27th| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Jan 28th| Pseudocode / actual code | Incomplete
-|Jan 29th| Initial Clickable Model  | Incomplete
+|Jan 27th| Pseudocode, Core Application Structure, Component files made, Routing | Incomplete
+|Jan 28th| Actual code | Incomplete
+|Jan 29th| Initial clickable model: all routes working, images rendering | Incomplete
 |Jan 30th| MVP | Incomplete
 |Jan 31tst| Present | Incomplete
 
