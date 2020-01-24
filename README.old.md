@@ -71,6 +71,8 @@
 
 ## Wireframes
 
+##### PostMVP additions are in purple
+
 ![Home Wireframe](images/HomeWireframe.png)
 ![Department Wireframe](images/DepartmentWireframe.png)
 ![Art Details Wireframe](images/ArtDetailsWireframe.png)
@@ -89,7 +91,7 @@
 
 ## React Component Hierarchy
 
-Include an image of your component hierarchy that shows the data flow and architectural design of your app.
+![Component Heirarchy](images/ComponentHeirarchy.png)
 
 ## Components
 
