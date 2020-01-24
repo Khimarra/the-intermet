@@ -1,153 +1,68 @@
-<img src="https://media.giphy.com/media/YxA2PPkXbwRTa/giphy.gif" />
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Project Overview
+## Available Scripts
 
-## The-InterMet
+In the project directory, you can run:
 
-**Project decription:** An app that randomly displays art that is currently on display at the Met, by department, using The Metropolitan Museum of Art Collection API. https://collectionapi.metmuseum.org/public/collection/v1/objects
+### `yarn start`
 
-## API Snippet
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```
-{
-    "objectID": 2376,
-    "isHighlight": false,
-    "accessionNumber": "46.140.752a, b",
-    "isPublicDomain": true,
-    "primaryImage": "https://images.metmuseum.org/CRDImages/ad/original/176958.jpg",
-    "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ad/web-large/176958.jpg",
-    "additionalImages": [],
-    "constituents": [
-        {
-            "role": "Maker",
-            "name": "McKee and Brothers"
-        }
-    ],
-    "department": "The American Wing",
-    "objectName": "Dish",
-    "title": "Figure Dish",
-    "culture": "American",
-    "period": "",
-    "dynasty": "",
-    "reign": "",
-    "portfolio": "",
-    "artistRole": "Maker",
-    "artistPrefix": "",
-    "artistDisplayName": "McKee and Brothers",
-    "artistDisplayBio": "1856–89",
-    "artistSuffix": "",
-    "artistAlphaSort": "McKee and Brothers",
-    "artistNationality": "",
-    "artistBeginDate": "1856",
-    "artistEndDate": "1889",
-    "objectDate": "1880–90",
-    "objectBeginDate": 1880,
-    "objectEndDate": 1890,
-    "medium": "Pressed opaque white glass",
-    "dimensions": "4 1/4 x 4 3/8 x 5 3/8 in. (10.8 x 11.1 x 13.7 cm)",
-    "creditLine": "Gift of Mrs. Emily Winthrop Miles, 1946",
-    "geographyType": "Made in",
-    "city": "Pittsburgh",
-    "state": "Pennsylvania",
-    "county": "",
-    "country": "United States",
-    "region": "Mid-Atlantic",
-    "subregion": "",
-    "locale": "",
-    "locus": "",
-    "excavation": "",
-    "river": "",
-    "classification": "Glass",
-    "rightsAndReproduction": "",
-    "linkResource": "",
-    "metadataDate": "2019-07-26T03:00:41.71Z",
-    "repository": "Metropolitan Museum of Art, New York, NY",
-    "objectURL": "https://www.metmuseum.org/art/collection/search/2376",
-    "tags": [
-        "Sheep"
-    ]
-}
-```
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Wireframes
+### `yarn test`
 
-Display all wireframes here with any neccessary descriptions.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### MVP
+### `yarn build`
 
-- Get data from Met API
-- Make home page with a randomly generated image and title of art piece, one for each department (there are 20) 
-- Render data about specific art piece on separate page, linked from image
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### PostMVP EXAMPLE:
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-- Add level between home page and art info where 10 randomly selected pieces from each department are displayed, make home page links go to department instead of specific info, these 10 pieces will link to their specific info.
-- Add search function so users can search through whole collection
-- Update styling with SASS
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## React Component Hierarchy
+### `yarn eject`
 
-Include an image of your component hierarchy that shows the data flow and architectural design of your app.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Components
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Based on the initial logic defined in the previous section, try to breakdown the logic further into stateless/stateful components. 
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-| Component | Description |Type |
-| --- | --- | --- |
-| Header | The Header receives props that render multiple nav titles and links | Functional |
-| Main | This component houses multiple rendered views through React Router and controls data received from the initial API call in state | Class |
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Priority Matrix
+## Learn More
 
-Include an image of your Priority Matrix (X is time and Y is priority)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Timeframes
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Timeframes are key in the development cycle. You have limited time to code and so much to accomplish!  Look at all of your planned files and components, and all of the areas of development you are planning and give an estimate of how long each one will take to complete. It's always best to pad the time to account for the unknown, so be sure to add an additional hour or two to play it safe. As you progress, you can update the "Time Invested" column to keep track of your hours, but that number should turn into "Actual Time" by the presentation day. Also, put a winter-themed gif at the top of your readme before you pitch to show you read the instructions thoroughly.
+### Code Splitting
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+### Analyzing the Bundle Size
 
-## Project Schedule
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
+### Making a Progressive Web App
 
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-|  Day | Deliverable | Status
-|---|---| ---|
-|Jan 24th| Project Pitch / Wireframes / Priority Matrix / Functional Components | Incomplete
-|Jan 27th| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Jan 28th| Pseudocode / actual code | Incomplete
-|Jan 29th| Initial Clickable Model  | Incomplete
-|Jan 30th| MVP | Incomplete
-|Jan 31tst| Present | Incomplete
+### Advanced Configuration
 
-## Additional Libraries
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-- React Router DOM
-- Axios
+### Deployment
 
-## Issues and Resolutions
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-- The Met's API has some limitations on endpoints, so I already had to tweak my original plan of what pieces to display. 
-- Not every piece has images, so in those cases I plan to load in a default "no image available" image
-- I want to implement a loading bar but I don't know how, yet. Will probably have to do some googling.
+### `yarn build` fails to minify
 
-## Code Snippet
-
-Use this section to include a brief code snippet you are proud of, along with a brief description of why.
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
-
-## Change Log
- Use this section to document what changes were made in your overall planning and the reasoning behind those changes.  
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
