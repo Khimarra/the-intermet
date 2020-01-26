@@ -1,5 +1,5 @@
 import React from 'react'
-import DeptButton from './DeptButton'
+import DeptButton from '../components/DeptButton'
 
 const DeptPage = () => {
     return (

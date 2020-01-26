@@ -1,6 +1,6 @@
 import React from 'react'
-import ArtDetails from './ArtDetails'
 import DeptPage from './DeptPage'
+import ArtDetails from './ArtDetails'
 
 class Main extends React.Component {
     render () {

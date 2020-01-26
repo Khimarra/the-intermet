@@ -1,5 +1,5 @@
 import React from 'react'
-import ArtButton from './ArtButton'
+import ArtButton from '../components/ArtButton'
 
 const ArtDetails = () => {
     return(

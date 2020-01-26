@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import Main from './components/Main';
+import Main from './screens/Main';
 import Footer from './components/Footer';
-import Nav from './components/Nav';
-import Title from './components/Title';
 
 class App extends React.Component {
   constructor(props) {
