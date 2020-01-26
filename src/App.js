@@ -3,13 +3,23 @@ import './App.css';
 import Header from './components/Header';
 import Main from './screens/Main';
 import Footer from './components/Footer';
+import { getDepts } from './services/apiHelper'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      departmentList: []
     }
+  }
+
+  async componentDidMount() {
+    let response = await getDepts()
+    this.setState({
+      departmentList: response.data
+    })
+    console.log(response.data)
+    console.log(response.data.departments[0].displayName)
   }
 
   render() {
@@ -19,7 +29,7 @@ class App extends React.Component {
         <header>
           <Header />
         </header>
-        <Main />
+        <Main deptList={this.state.departmentList} />
         <Footer />
       </div>
     );
