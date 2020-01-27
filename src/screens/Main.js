@@ -11,7 +11,7 @@ const Main = (props) => {
                     {props.deptList.departments && props.deptList.departments.map((department, index) => {
                         return (
                             <div className='dept'>
-                                <h4 key={index}>{department.displayName}</h4>
+                                <h4 className='dept-name' key={index}>{department.displayName}</h4>
                                 <div className='dept-image'>Dept Images go Here
                                 </div>
                             </div>

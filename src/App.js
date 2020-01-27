@@ -3,36 +3,27 @@ import './App.css';
 import Header from './components/Header';
 import Main from './screens/Main';
 import Footer from './components/Footer';
-import { getDepts, getObjects, getObjByDept } from './services/apiHelper'
+import { getDepts, getObjDetails } from './services/apiHelper'
+import { Route } from 'react-router-dom'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       departmentList: [],
-      // objects: [],
-      deptObjects: []
+      objDetails: []
     }
   }
 
   async componentDidMount() {
     let deptsRes = await getDepts()
-    // let objectsRes = await getObjects()
+    let objDetailsRes = await getObjDetails()
     this.setState({
       departmentList: deptsRes.data,
-      // objects: objectsRes.data,
+      objects: objDetailsRes.data,
     })
-    console.log(deptsRes.data)
-    // console.log(response.data.departments[0].displayName)
+    console.log(objDetailsRes.data)
   }
-
-  // async componentDidMount() {
-  //   let response = await getObjects()
-  //   this.setState({
-  //     objects: response.data
-  //   })
-  //   console.log(response.data)
-  // }
 
   render() {
     return (
@@ -40,7 +31,11 @@ class App extends React.Component {
         <header>
           <Header />
         </header>
-        <Main deptList={this.state.departmentList} />
+        <Route exact 
+        path='/' 
+        component={() => (        <Main deptList={this.state.departmentList} />
+          )}
+        />
         <Footer />
       </div>
     );
