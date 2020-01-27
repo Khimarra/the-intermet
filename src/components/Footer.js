@@ -2,8 +2,9 @@ import React from 'react'
 
 const Footer = () => {
     return(
-        <div>
-            <h2>Footer</h2>
+        <div className='footer'>
+            <h3>The InterMet is powered by The Metropolitan Museum of Art Collection API</h3>
+            <h3>© - 2020 Tara Solbrig</h3>
         </div>
     )
 }

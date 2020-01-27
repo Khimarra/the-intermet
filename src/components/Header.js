@@ -5,7 +5,7 @@ import Nav from './Nav'
 const Header = () => {
     return(
         <div>
-            <h2>Header</h2>
+            <h1>Welcome to the InterMet!</h1>
             <Nav />
             <Title />
         </div>

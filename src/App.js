@@ -3,29 +3,40 @@ import './App.css';
 import Header from './components/Header';
 import Main from './screens/Main';
 import Footer from './components/Footer';
-import { getDepts } from './services/apiHelper'
+import { getDepts, getObjects, getObjByDept } from './services/apiHelper'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      departmentList: []
+      departmentList: [],
+      objects: [],
+      deptObjects: []
     }
   }
 
   async componentDidMount() {
-    let response = await getDepts()
+    let deptsRes = await getDepts()
+    let objectsRes = await getObjects()
     this.setState({
-      departmentList: response.data
+      departmentList: deptsRes.data,
+      objects: objectsRes.data,
     })
-    console.log(response.data)
-    console.log(response.data.departments[0].displayName)
+    console.log(objectsRes.data)
+    // console.log(response.data.departments[0].displayName)
   }
+
+  // async componentDidMount() {
+  //   let response = await getObjects()
+  //   this.setState({
+  //     objects: response.data
+  //   })
+  //   console.log(response.data)
+  // }
 
   render() {
     return (
       <div className="App">
-        <h1>Hello React</h1>
         <header>
           <Header />
         </header>
