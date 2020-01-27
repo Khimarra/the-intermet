@@ -22,12 +22,26 @@ class App extends React.Component {
     let objDetailsRes = await getObjDetails()
     this.setState({
       departmentList: deptsRes.data,
-      objDetails: objDetailsRes.data,
+      objDetails: objDetailsRes.data
     })
-    console.log(objDetailsRes.data)
   }
 
   render() {
+
+    if(!this.state.departmentList.departments) {
+      return (
+        <div className="App">
+          <header>
+            <Header />
+          </header>
+          <h2>Please Wait...</h2>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      )
+    }
+
     return (
       <div className="App">
         <header>
@@ -44,12 +58,9 @@ class App extends React.Component {
 
         <Route
           exact
-          path='/DeptPage'
-          component={() => (
-            <div>
-              <h1>Department Name</h1>
-              <DeptPage department={this.state.departmentList} />
-            </div>
+          path='/DeptPage/:dept_index'
+          component={(props) => (
+              <DeptPage {...props} deptList={this.state.departmentList} />
           )}
         />
 

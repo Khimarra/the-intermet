@@ -7,9 +7,16 @@ export const getDepts = async () => {
     return response
 }
 
+const getObjList = async () => {
+    let objList = await axios.get(`${base}objects`)
+    return objList.data.objectIDs
+}
+
 export const getObjDetails = async () => {
-    let objId = Math.floor(Math.random() * 471885)
-    const response = await axios.get(`${base}objects/${objId}`)
+    const objList = await getObjList()
+    let objId = Math.floor(Math.random() * (objList.length))
+    console.log(objId)
+    const response = await axios.get(`${base}objects/${objList[objId]}`)
     return response
 } 
 
