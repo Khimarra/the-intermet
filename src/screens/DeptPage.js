@@ -5,6 +5,7 @@ const DeptPage = () => {
     return (
         <div>
             <h4>Department Page</h4>
+            
             <DeptButton />
         </div>
     )
