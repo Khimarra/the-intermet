@@ -1,6 +1,6 @@
 import React from 'react'
-import DeptPage from './DeptPage'
-import ArtDetails from './ArtDetails'
+import DeptButton from '../components/DeptButton'
+import { NavLink } from 'react-router-dom'
 
 const Main = (props) => {
     console.log(props.deptList)
@@ -11,16 +11,14 @@ const Main = (props) => {
                 
                 {props.deptList.departments && props.deptList.departments.map((department, index) => {
                     return (
-                        <div className='dept'>
-                            <h4 className='dept-name' key={index}>{department.displayName}</h4>
-                            <div className='dept-image'>Dept Images go Here
-                            </div>
-                        </div>
+                        <NavLink key={index} exact to={`/DeptPage/${index}`}>
+                        <h4 className='dept-name'>{department.displayName}</h4>
+                            <DeptButton deptList={props.deptList} />              
+                        </NavLink>
+        
                     )
                 })}
             </div>
-            <DeptPage />
-            <ArtDetails />
         </div>
     )
 }

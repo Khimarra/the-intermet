@@ -53,7 +53,7 @@ class App extends React.Component {
           )}
         />
 
-        <Route
+        {/* <Route
           exact
           path='/ArtPage'
           component={() => (
@@ -63,7 +63,7 @@ class App extends React.Component {
             </div>
           )}
         />
-
+ */}
         <Footer />
       </div>
     );
