@@ -1,5 +1,5 @@
 import React from 'react'
-import DeptButton from '../components/DeptButton'
+import DeptButton from '../components/Button'
 import { NavLink } from 'react-router-dom'
 
 const Main = (props) => {

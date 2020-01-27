@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import { getDepts, getObjDetails } from './services/apiHelper'
 import { Route } from 'react-router-dom'
 import DeptPage from './screens/DeptPage'
-import ArtDetails from './screens/ArtDetails';
+// import ArtDetails from './screens/ArtDetails';
 
 class App extends React.Component {
   constructor(props) {
