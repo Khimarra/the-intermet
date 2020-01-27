@@ -7,10 +7,10 @@ export const getDepts = async () => {
     return response
 }
 
-export const getObjects = async () => {
-    const response = await axios.get(`${base}objects`)
-    return response
-}
+// export const getObjects = async () => {
+//     const response = await axios.get(`${base}objects`)
+//     return response
+// } returns array of object IDs. Not useful for data.
 
 export const getObjByDept = async () => {
     const response = await axios.get(`${base}objects?departmentIds=${'deptId'}`)

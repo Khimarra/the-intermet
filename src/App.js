@@ -10,19 +10,19 @@ class App extends React.Component {
     super(props)
     this.state = {
       departmentList: [],
-      objects: [],
+      // objects: [],
       deptObjects: []
     }
   }
 
   async componentDidMount() {
     let deptsRes = await getDepts()
-    let objectsRes = await getObjects()
+    // let objectsRes = await getObjects()
     this.setState({
       departmentList: deptsRes.data,
-      objects: objectsRes.data,
+      // objects: objectsRes.data,
     })
-    console.log(objectsRes.data)
+    console.log(deptsRes.data)
     // console.log(response.data.departments[0].displayName)
   }
 
