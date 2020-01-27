@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Button from '../components/Button'
-import { getObjDetails } from '../services/apiHelper'
+import { getObjByDept } from '../services/apiHelper'
 
 // export const getDepts = async () => {
 //     const response = await axios.get(`${base}departments`)
@@ -9,26 +9,28 @@ import { getObjDetails } from '../services/apiHelper'
 
 const DeptPage = (props) => {
     const deptIndex = props.match.params.dept_index
+    const deptId = props.deptList.departments[deptIndex].departmentId
 
-    const [objDetails, setDept] = useState(null)
+    const [object, setObject] = useState(null)
+
     useEffect(() => {
-        getObj()
+        objByDept()
     }, [])
 
-    const getObj = async () => {
-        const response = await getObjDetails()
-        setDept(response)
+    const objByDept = async () => {
+        const response = await getObjByDept(deptId)
+        setObject(response)
     }
 
-    console.log(objDetails)
+    console.log(getObjByDept(deptId))
 
     return (
         <div>
             <h2 className='dept-name'>
                 {props.deptList.departments[deptIndex].displayName}
             </h2>
-            <h2>{objDetails && objDetails.objectID}</h2>
-            <img src={`${objDetails && objDetails.primaryImage}`} />
+            <h2>{object && object.objectID}</h2>
+            <img src={`${object && object.primaryImage}`} alt='' className='dept-images' />
             <Button />
         </div>
     )

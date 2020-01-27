@@ -2,6 +2,7 @@ import axios from 'axios'
 
 const base = "https://collectionapi.metmuseum.org/public/collection/v1/"
 
+
 export const getDepts = async () => {
     const response = await axios.get(`${base}departments`)
     return response
@@ -19,8 +20,11 @@ export const getObjDetails = async () => {
     return response.data
 } 
 
-// export const getObjByDept = async () => {
-//     const response = await axios.get(`${base}objects?departmentIds=${deptId}`)
-//     return response
-// }
+export const getObjByDept = async (deptId) => {
+    const response = await axios.get(`${base}search?departmentId=${deptId}&isHighlight=true&hasImages=true&q=the`)
+    const objList = response.data.objectIDs
+    let objId = Math.floor(Math.random() * (objList.length))
+    const responseTwo = await axios.get(`${base}objects/${objList[objId]}`)
+    return responseTwo.data
+}
 
