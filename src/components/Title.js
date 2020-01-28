@@ -3,7 +3,7 @@ import React from 'react'
 const Title = () => {
     return (
         <div className='title'>
-            <h4>Title</h4>
+            <h1>Welcome to the Inter<span>Met</span>!</h1>
         </div>
     )
 }

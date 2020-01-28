@@ -33,8 +33,10 @@ const Main = (props) => {
                     console.log(objects)
                     return (
                         <NavLink key={index} exact to={`/DeptPage/${index}`}>
-                            <img className="home-images" src={`${objects[index] && objects[index].primaryImage}`} alt='' />
-                            <h4 className='dept-name'>{department.displayName}</h4>
+                            <div className="dept-cards">
+                                <img className="home-images" src={`${objects[index] && objects[index].primaryImage}`} alt='' />
+                                <h4 className='dept-name'>{department.displayName}</h4>
+                            </div>
                         </NavLink>
                     )
                 })}
