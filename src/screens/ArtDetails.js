@@ -19,12 +19,48 @@ const ArtDetails = (props) => {
             
             <img className="primary-image" src={`${props.objDetails && props.objDetails.primaryImage}`} alt='' />
             <ul className="object-info">Title: {props.objDetails && props.objDetails.title}
-                <li>Medium: {props.objDetails && props.objDetails.medium}</li>
-                <li>Dimensions: {props.objDetails && props.objDetails.dimensions}</li>
-                <li>Created: {props.objDetails && props.objDetails.objectDate}</li>
-                <li>Culture: {props.objDetails && props.objDetails.culture}</li>
-                <li>Credits: {props.objDetails && props.objDetails.creditLine}</li>
-                <li>Current Location: {props.objDetails && props.objDetails.repository}</li>
+                <li>
+                    {
+                        (props.objDetails && props.objDetails.medium) ?
+                        (`Medium: ${props.objDetails && props.objDetails.medium}`) :
+                        ('')
+                    }
+                </li>
+                <li>
+                    {
+                        (props.objDetails && props.objDetails.dimensions) ?
+                        (`Dimensions: ${props.objDetails && props.objDetails.dimensions}`) :
+                        ('')
+                    }
+                </li>
+                <li>
+                    {
+                        (props.objDetails && props.objDetails.objectDate) ?
+                        (`Created: ${props.objDetails && props.objDetails.objectDate}`) :
+                        ('')
+                    }
+                </li>
+                <li>
+                    {
+                        (props.objDetails && props.objDetails.culture) ?
+                        (`Culture: ${props.objDetails && props.objDetails.culture}`) :
+                        ('')
+                    }
+                </li>
+                <li>
+                    {
+                        (props.objDetails && props.objDetails.creditLine) ?
+                        (`Credits: ${props.objDetails && props.objDetails.creditLine}`) :
+                        ('')
+                    }
+                </li>
+                <li>
+                    {
+                        (props.objDetails && props.objDetails.repository) ?
+                        (`Current Location: ${props.objDetails && props.objDetails.repository}`) :
+                        ('')
+                    }
+                </li>
             </ul>
 
             <ul className="artist-bio">
