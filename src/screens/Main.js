@@ -1,5 +1,5 @@
 import React from 'react'
-import DeptButton from '../components/Button'
+import Button from '../components/Button'
 import { NavLink } from 'react-router-dom'
 
 const Main = (props) => {
@@ -12,7 +12,7 @@ const Main = (props) => {
                     return (
                         <NavLink key={index} exact to={`/DeptPage/${index}`}>
                             <h4 className='dept-name'>{department.displayName}</h4>
-                            <DeptButton deptList={props.deptList} />              
+                            <Button deptList={props.deptList} />              
                         </NavLink>
                     )
                 })}
