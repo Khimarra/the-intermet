@@ -9,6 +9,7 @@ import { NavLink } from 'react-router-dom'
 // }
 
 const DeptPage = (props) => {
+    console.log(props)
     const deptIndex = props.match.params.dept_index
     const deptId = props.deptList.departments[deptIndex].departmentId
     const [objects, setObjects] = useState([])
@@ -24,19 +25,24 @@ const DeptPage = (props) => {
     const objByDept = async () => {
         const response = await getObjByDept(deptId)
         setObjects(response)
+        console.log(response)
+
     }
 
     const objByDeptTwo = async () => {
         const response = await getObjByDept(deptId)
         setObjectsTwo(response)
+        console.log(response)
+
     }
 
     const objByDeptThree = async () => {
         const response = await getObjByDept(deptId)
         setObjectsThree(response)
+        console.log(response)
+
     }
 
-    console.log(getObjByDept(deptId))
 
     return (
         <div className='dept-page-images'>
@@ -46,19 +52,20 @@ const DeptPage = (props) => {
             <NavLink exact to={`/ArtPage/${objects.objectID}`}>
                 <h2 className='object-id'>{objects && objects.objectID}</h2>
                 <img src={`${objects && objects.primaryImage}`} alt='' className='dept-images' />
-                <Button />
+                {console.log(objects.objectID)}
+                <Button artDetails={objects} />
             </NavLink>
 
             <NavLink exact to={`/ArtPage/${objectsTwo.objectID}`}>
                 <h2 className='object-id'>{objectsTwo && objectsTwo.objectID}</h2>
                 <img src={`${objectsTwo && objectsTwo.primaryImage}`} alt='' className='dept-images' />
-                <Button />
+                <Button artDetails={objectsTwo.objectID} />
             </NavLink>
 
             <NavLink exact to={`/ArtPage/${objectsThree.objectID}`}>
                 <h2 className='object-id'>{objectsThree && objectsThree.objectID}</h2>
                 <img src={`${objectsThree && objectsThree.primaryImage}`} alt='' className='dept-images' />
-                <Button />
+                <Button artDetails={objectsThree.objectID} />
             </NavLink>
 
         </div>

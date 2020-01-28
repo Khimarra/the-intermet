@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import { getDepts, getObjDetails } from './services/apiHelper'
 import { Route } from 'react-router-dom'
 import DeptPage from './screens/DeptPage'
-// import ArtDetails from './screens/ArtDetails';
+import ArtDetails from './screens/ArtDetails';
 
 class App extends React.Component {
   constructor(props) {
@@ -59,22 +59,22 @@ class App extends React.Component {
         <Route
           exact
           path='/DeptPage/:dept_index'
-          component={(props) => (
-              <DeptPage {...props} deptList={this.state.departmentList} />
+          component={(navProps) => (
+              <DeptPage {...navProps} deptList={this.state.departmentList} />
           )}
         />
 
-        {/* <Route
+        <Route
           exact
-          path='/ArtPage'
-          component={() => (
+          path='/ArtPage/:obj_index'
+          component={(navProps) => (
             <div>
               <h1>Object Name</h1>
-              <ArtDetails objDetails={this.state.objDetails} />
+              <ArtDetails {...navProps} objDetails={this.state.objDetails} />
             </div>
           )}
         />
- */}
+
         <Footer />
       </div>
     );
