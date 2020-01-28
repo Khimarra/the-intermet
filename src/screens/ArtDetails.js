@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getObjDetails } from '../services/apiHelper'
+import { Route } from 'react-router-dom'
 
 const ArtDetails = (props) => {
+
+    const [newObject, setNewObject] = useState([])
+
+    useEffect(() => {
+        objDetails()
+    }, [])
+
+    const objDetails = async () => { 
+        const response = await getObjDetails()
+        setNewObject(response)
+    }
+
     const objectID = props.match.params.obj_index
-    console.log(props.objDetails)
-    
+
+    if(props.objDetails) {
     return(
         <div className="art-details">
             <h1 className="object-name">{props.objDetails && props.objDetails.title}</h1>
@@ -95,6 +109,24 @@ const ArtDetails = (props) => {
             <h5>Object ID: {objectID}</h5>
         </div>
     )
+
+    } else {
+
+        return(
+            <Route
+                exact
+                path='/ArtPage/:obj_index'
+                component={(navProps) => (
+              <div>
+                <ArtDetails {...navProps} objDetails={newObject} />
+              </div>
+            )}
+          />
+        )
+    }
+
+
+
 }
 
 export default ArtDetails
