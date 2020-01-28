@@ -98,6 +98,7 @@
 - Add an aside to art page with links to additional images (if available)
 - Add an aside to department page with links to other departments
 - Make new API call from art details page so data will render without the onClick
+- Make links so when user clicks on an image, it gives them the full-size image.
 
 ## React Component Hierarchy
 

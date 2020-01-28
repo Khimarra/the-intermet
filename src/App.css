@@ -77,6 +77,10 @@ h2 {
   text-align: center;  
 }
 
+.primary-image {
+  width: 75vw;
+}
+
 /* ------ FOOTER ------ */
 
 .footer {
