@@ -99,6 +99,7 @@
 - Add an aside to department page with links to other departments
 - Make new API call from art details page so data will render without the onClick
 - Make links so when user clicks on an image, it gives them the full-size image.
+- Figure out how to deal with the fact that a few of the object titles in the API have HTML tags in them. 
 
 ## React Component Hierarchy
 
