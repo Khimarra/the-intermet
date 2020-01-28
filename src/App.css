@@ -1,3 +1,5 @@
+/* ------ HEADER ------ */
+
 header {
   text-align: center;
   background-color: rgb(168, 14, 14);
@@ -5,7 +7,7 @@ header {
   height: 250px;
 }
 
-h1 {
+header h1 {
   width: 45vw;
   margin: auto;
   font-size: 50px;
@@ -38,7 +40,7 @@ h2 {
   text-align: center;
 }
 
-/* ------ MAIN ------ */
+/* ------ MAIN (home) ------ */
 
 .dept-list {
   display: grid;
@@ -68,6 +70,14 @@ h2 {
 .dept-images {
   width: 30vw;
 }
+
+/* ------ ART DETAILS ------ */
+
+.art-details {
+  text-align: center;  
+}
+
+/* ------ FOOTER ------ */
 
 .footer {
   background-color: rgb(168, 14, 14);

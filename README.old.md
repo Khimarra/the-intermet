@@ -79,11 +79,11 @@
 
 ### MVP
 
-- Get data from Met API
-- Make home page with a randomly generated image and title of art piece, one for each department (there are 20) 
-- Make department page component, similar to home, but with links to specific pieces
+- Get data from Met API - DONE
+- Make home page with a randomly generated image and title of art piece, one for each department (there are 20) - DONE
+- Make department page component, similar to home, but with links to specific pieces - DONE
 - Render data about specific art piece on separate page, linked from image on department page
-- Set up router so links actually link to things
+- Set up router so links actually link to things - DONE
 - Styling with at least one media query
 
 #### PostMVP EXAMPLE:
@@ -97,7 +97,7 @@
 - Add an external links section with links to the Met's website and the piece's specific URL
 - Add an aside to art page with links to additional images (if available)
 - Add an aside to department page with links to other departments
-
+- Make new API call from art details page so data will render without the onClick
 
 ## React Component Hierarchy
 
@@ -111,10 +111,10 @@
 | Header | Header will contain current page title and Nav link to Home | Functional |
 | Nav | The nav link housed in the Header, routes to Home | Functional |
 | Title | Page title housed in the header | Functional |
-| Main | This component houses multiple rendered views through React Router and controls data received from the initial API call in state | Class |
-| Art Details | Page that contains info about a specific art piece. Linked to from Department page | Class |
+| Main | This component houses multiple rendered views through React Router and controls data received from the initial API call in state | Functional |
+| Art Details | Page that contains info about a specific art piece. Linked to from Department page | Functional |
 | Art Button | Nav link that routes to Art Details | Functional |
-| Department Page | Contains info about specific department, contains Art Buttons, routed to from Department Buttons. | Class |
+| Department Page | Contains info about specific department, contains Art Buttons, routed to from Department Buttons. | Functional |
 | Department Button | Contains route info to link to each department page. Housed in Main. Receives props | Functional |
 | Footer | Footer with API credit | Functional |
 
@@ -127,15 +127,15 @@
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| API Calls | H | 3hrs | 0hrs | 0hrs |
-| Working with API | H | 10hrs | 0hrs | 0hrs |
-| Home Page | H | 4hrs| 0hrs | 0hrs |
-| Department Page | M | 4hrs| 0hrs | 0hrs |
-| Art Page | M | 4hrs | 0hrs | 0hrs |
-| Routing | H | 3hrs | 0hrs | 0hrs |
-| Styling | M | 10hrs | 0hrs | 0hrs |
+| API Calls | H | 3hrs | 2hrs | 0hrs |
+| Working with API | H | 10hrs | 4hrs | 0hrs |
+| Home Page | H | 4hrs| 0.5hrs | 0hrs |
+| Department Page | M | 4hrs| 0.5hrs | 0hrs |
+| Art Page | M | 4hrs | 0.5hrs | 0hrs |
+| Routing | H | 3hrs | 2hrs | 0hrs |
+| Styling | M | 10hrs | 0.5hrs | 0hrs |
 | PostMVP | L | 0hrs | 0hrs | 0hrs |
-| Total | H | 38hrs| 0hrs | 0hrs |
+| Total | H | 38hrs| 12hrs | 0hrs |
 
 ## Project Schedule
 
@@ -145,9 +145,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 24th| Project pitch, wireframes, priority matrix, component heirarchy | Incomplete
-|Jan 27th| Pseudocode, Core Application Structure, Component files made | Incomplete
-|Jan 28th| Actual code: routing, rendering data from API | Incomplete
+|Jan 24th| Project pitch, wireframes, priority matrix, component heirarchy | Complete
+|Jan 27th| Pseudocode, Core Application Structure, Component files made | Complete
+|Jan 28th| Actual code: routing, rendering data from API | Complete
 |Jan 29th| Initial clickable model: all routes working, images rendering | Incomplete
 |Jan 30th| MVP | Incomplete
 |Jan 31tst| Present | Incomplete
@@ -162,6 +162,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 - The Met's API has some limitations on endpoints, so I already had to tweak my original plan of what pieces to display. 
 - Not every piece has images, so in those cases I plan to load in a default "no image available" image
 - I want to implement a loading bar but I don't know how, yet. Will probably have to do some googling.
+- Rendering info to the art details page after linking from specific pieces on the department page required lifting state (which means I can't link directly to an object without clicking on the link in department page. Will address this in PostMVP).
 
 ## Code Snippet
 
@@ -174,4 +175,5 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made in your overall planning and the reasoning behind those changes.  
+
+- I originally wanted to get all of the objects from each specific department in my main API call, but due to how the API is structured, I can't do that. I ended up cheating the request a bit with a query for the word "the" in order to return the maximum amount of objects possible with a single query.

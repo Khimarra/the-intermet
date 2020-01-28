@@ -15,6 +15,7 @@ class App extends React.Component {
       departmentList: [],
       objDetails: []
     }
+    
   }
 
   async componentDidMount() {
@@ -23,6 +24,12 @@ class App extends React.Component {
     this.setState({
       departmentList: deptsRes.data,
       objDetails: objDetailsRes.data
+    })
+  }
+
+  handleNavToArtDetails = async (objectinfo) => {
+    this.setState({
+      objDetails: objectinfo
     })
   }
 
@@ -42,6 +49,8 @@ class App extends React.Component {
       )
     }
 
+    
+
     return (
       <div className="App">
         <header>
@@ -60,7 +69,7 @@ class App extends React.Component {
           exact
           path='/DeptPage/:dept_index'
           component={(navProps) => (
-              <DeptPage {...navProps} deptList={this.state.departmentList} />
+              <DeptPage {...navProps} deptList={this.state.departmentList} onClick={this.handleNavToArtDetails} />
           )}
         />
 
@@ -69,7 +78,6 @@ class App extends React.Component {
           path='/ArtPage/:obj_index'
           component={(navProps) => (
             <div>
-              <h1>Object Name</h1>
               <ArtDetails {...navProps} objDetails={this.state.objDetails} />
             </div>
           )}
