@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom'
 const ArtDetails = (props) => {
 
     const [newObject, setNewObject] = useState([])
+    const image = props.objDetails && props.objDetails.primaryImage
+    const defaultImage = 'images/No_Image_Available.png'
 
     useEffect(() => {
         objDetails()
@@ -18,6 +20,7 @@ const ArtDetails = (props) => {
     const objectID = props.match.params.obj_index
 
     if(props.objDetails) {
+        console.log(props.objDetails)
     return(
         <div className="art-details">
             <h1 className="object-name">{props.objDetails && props.objDetails.title}</h1>
@@ -31,7 +34,7 @@ const ArtDetails = (props) => {
                 }
             </h4>
             
-            <img className="primary-image" src={`${props.objDetails && props.objDetails.primaryImage}`} alt='' />
+            <img className="primary-image" src="../images/No_Image_Available.png" alt='' />
             <ul className="object-info">Title: {props.objDetails && props.objDetails.title}
                 <li>
                     {
@@ -85,21 +88,21 @@ const ArtDetails = (props) => {
                 }
                 <li>
                     {
-                        (props.objDetails && props.objDetails.artistDisplayName) ?
+                        ((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistDisplayBio)) ?
                         (`Bio: ${props.objDetails && props.objDetails.artistDisplayBio}`) :
                         ('')
                     }
                 </li>
                 <li>
                     {
-                        (props.objDetails && props.objDetails.artistDisplayName) ?
+                        ((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistBeginDate)) ?
                         (`Born: ${props.objDetails && props.objDetails.artistBeginDate}`) :
                         ('')
                     }
                 </li>
                 <li>
                     {
-                        (props.objDetails && props.objDetails.artistDisplayName) ?
+                        ((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistEndDate)) ?
                         (`Died: ${props.objDetails && props.objDetails.artistEndDate}`) :
                         ('')
                     }

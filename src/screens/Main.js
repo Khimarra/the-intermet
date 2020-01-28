@@ -34,7 +34,7 @@ const Main = (props) => {
                     return (
                         <NavLink key={index} exact to={`/DeptPage/${index}`}>
                             <div className="dept-cards">
-                                <img className="home-images" src={`${objects[index] && objects[index].primaryImage}`} alt='' />
+                                <img className="home-images" src={`${(objects[index] && objects[index].primaryImageSmall) ? (objects[index] && objects[index].primaryImageSmall) : (objects[index] && objects[index].primaryImage)}`} alt='' />
                                 <h4 className='dept-name'>{department.displayName}</h4>
                             </div>
                         </NavLink>
