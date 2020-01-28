@@ -100,6 +100,7 @@
 - Make new API call from art details page so data will render without the onClick
 - Make links so when user clicks on an image, it gives them the full-size image.
 - Figure out how to deal with the fact that a few of the object titles in the API have HTML tags in them. 
+- In artist bio, make array of info to be returned. then map through with a turnary instead of manually doing a turnary on each line.
 
 ## React Component Hierarchy
 
