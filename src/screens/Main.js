@@ -28,11 +28,12 @@ const Main = (props) => {
             <div className='dept-list'>
                 
                 {props.deptList.departments && props.deptList.departments.map((department, index) => {
-                    console.log(objects)
                     return (
                         <NavLink key={index} exact to={`/DeptPage/${index}`}>
                             <div className="dept-cards">
-                                <img className="home-images" src={`${(objects[index] && objects[index].primaryImageSmall) ? (objects[index] && objects[index].primaryImageSmall) : (objects[index] && objects[index].primaryImage)}`} alt='' />
+                                <div className='image-container'>
+                                    <img className="home-images" src={`${(objects[index] && objects[index].primaryImageSmall) ? (objects[index] && objects[index].primaryImageSmall) : (objects[index] && objects[index].primaryImage)}`} alt='' />
+                                </div>
                                 <h4 className='dept-name'>{department.displayName}</h4>
                             </div>
                         </NavLink>
