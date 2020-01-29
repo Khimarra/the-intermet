@@ -34,21 +34,30 @@ const DeptPage = (props) => {
     return (
         <div className='dept-page-images'>
             
-            <h2 className='dept-name'>{props.deptList.departments[deptIndex].displayName}</h2>
-            <NavLink exact to={`/ArtPage/${objects.objectID}`} objectinfo={objects} onClick={() => {props.onClick(objects)}}>
-                <h2 className='object-id'>{objects && objects.objectID}</h2>
-                <img src={`${objects && objects.primaryImage}`} alt='' className='dept-images' />
-            </NavLink>
+            <h2 className='dept-title'>{props.deptList.departments[deptIndex].displayName}</h2>
 
-            <NavLink exact to={`/ArtPage/${objectsTwo.objectID}`} objectinfo={objectsTwo} onClick={() => {props.onClick(objectsTwo)}}>
-                <h2 className='object-id'>{objectsTwo && objectsTwo.objectID}</h2>
-                <img src={`${objectsTwo && objectsTwo.primaryImage}`} alt='' className='dept-images' />
-            </NavLink>
+            <div className='dept-grid'>
+                <NavLink className='art-cards' exact to={`/ArtPage/${objects.objectID}`} objectinfo={objects} onClick={() => {props.onClick(objects)}}>
+                    <div className='dp-image-container'>
+                        <img src={`${objects && objects.primaryImage}`} alt='' className='dept-images' />
+                    </div>
+                    <h2 className='object-name'>{objects && objects.title}</h2>
+                </NavLink>
 
-            <NavLink exact to={`/ArtPage/${objectsThree.objectID}`} objectinfo={objectsThree} onClick={() => {props.onClick(objectsThree)}}>
-                <h2 className='object-id'>{objectsThree && objectsThree.objectID}</h2>
-                <img src={`${objectsThree && objectsThree.primaryImage}`} alt='' className='dept-images' />
-            </NavLink>
+                <NavLink className='art-cards' exact to={`/ArtPage/${objectsTwo.objectID}`} objectinfo={objectsTwo} onClick={() => {props.onClick(objectsTwo)}}>
+                    <div className='dp-image-container'>
+                        <img src={`${objectsTwo && objectsTwo.primaryImage}`} alt='' className='dept-images' />
+                    </div>
+                    <h2 className='object-name'>{objectsTwo && objectsTwo.title}</h2>
+                </NavLink>
+
+                <NavLink className='art-cards' exact to={`/ArtPage/${objectsThree.objectID}`} objectinfo={objectsThree} onClick={() => {props.onClick(objectsThree)}}>
+                    <div className='dp-image-container'>
+                        <img src={`${objectsThree && objectsThree.primaryImage}`} alt='' className='dept-images' />
+                    </div>
+                    <h2 className='object-name'>{objectsThree && objectsThree.title}</h2>
+                </NavLink>
+            </div>
 
         </div>
     )

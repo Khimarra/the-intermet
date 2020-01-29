@@ -63,14 +63,14 @@ h2 {
   grid-gap: 5vw;
 }
 
-.dept-cards {
+.dept-cards, .art-cards {
   height: 100%;
   background: rgb(156,156,156);
   background: radial-gradient(circle, rgb(230, 230, 230) 25%, rgba(255,255,255,1) 100%);
   box-shadow: 0 0 5px rgb(134, 134, 134);
 }
 
-.dept-name {
+.dept-name, .object-name {
   font-size: 2.5vw;
   color: black;
   text-align: center;
@@ -82,7 +82,7 @@ h2 {
   height: 40vw;
 }
 
-.home-images {
+.home-images, .dept-images {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -97,9 +97,23 @@ h2 {
 
 /* ------ DEPT PAGE ------ */
 
-.dept-images {
-  width: 30vw;
+.dept-images:link {
+  color: black,
 }
+
+.dept-grid {
+  margin: 5vw 15vw;
+  display: grid;
+  grid-template-rows: 75vw 75vw 75vw;
+  grid-gap: 5vw;
+}
+
+.dp-image-container {
+  position: relative;
+  height: 60vw;
+}
+
+
 
 /* ------ ART DETAILS ------ */
 
@@ -137,7 +151,7 @@ h2 {
     transition: all .2s;
   }
   
-  .dept-cards:hover {
+  .dept-cards:hover, .art-cards:hover {
     box-shadow: 0 0 10px rgb(121, 121, 121);
     transform: scale(1.05);
   }
