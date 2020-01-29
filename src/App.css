@@ -65,16 +65,16 @@ h2 {
 
 .dept-cards, .art-cards {
   height: 100%;
-  background: rgb(156,156,156);
-  background: radial-gradient(circle, rgb(230, 230, 230) 25%, rgba(255,255,255,1) 100%);
+  background: radial-gradient(circle, rgb(218, 218, 218) 25%, rgb(255,255,255) 100%);
   box-shadow: 0 0 5px rgb(134, 134, 134);
 }
 
-.dept-name, .object-name {
-  font-size: 2.5vw;
+.dept-name, .object-name, .artist-name {
+  font-size: 2.8vw;
   color: black;
   text-align: center;
   text-decoration: none;
+  margin: 1vw 2vw;
 }
 
 .image-container {
