@@ -12,11 +12,9 @@ const Main = (props) => {
         const fetchAllImages = async () => {
             const images = deptIndex.map(async i => await objByDept(i))
             const allObjects = await Promise.all(images)
-            console.log(allObjects)
             setObjects(allObjects) 
         }
         fetchAllImages()
-            console.log(deptIndex)
     }, [])
 
     const objByDept = async (deptId) => {

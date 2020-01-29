@@ -34,7 +34,7 @@ const ArtDetails = (props) => {
                 }
             </h4>
             
-            <img className="primary-image" src="../images/No_Image_Available.png" alt='' />
+            <img className="primary-image" src={`${(props.objDetails && props.objDetails.primaryImage) ? (props.objDetails && props.objDetails.primaryImage) : ("../images/No_Image_Available.png")}`} alt='' />
             <ul className="object-info">Title: {props.objDetails && props.objDetails.title}
                 <li>
                     {
