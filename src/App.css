@@ -53,7 +53,7 @@ h2 {
   text-align: center;
 }
 
-/* ------ MAIN (home) ------ */
+/* ------ MAIN (home) AND A BIT OF DEPT PAGE ------ */
 
 .dept-list {
   margin: 5vw;
@@ -95,6 +95,8 @@ h2 {
   max-height: 95%;
 }
 
+
+
 /* ------ DEPT PAGE ------ */
 
 .dept-images:link {
@@ -124,6 +126,32 @@ h2 {
 .primary-image {
   width: 75vw;
 }
+
+h4 {
+  font-size: 6vw;
+}
+
+/* .info-grid {
+  display: grid;
+  grid-template-columns: 30vw 66vw;
+  margin: 2vw;
+}
+
+.info-grid ul {
+  padding: 0;
+}
+
+.info-grid li {
+  display: grid;
+  grid-template-rows: 30vw;
+  text-align: left;
+  font-size: 5vw;
+  border: 1px solid rgb(173, 173, 173);
+  list-style-type: none;
+  padding: 1vw;
+} */
+
+
 
 /* ------ FOOTER ------ */
 
