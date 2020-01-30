@@ -13,6 +13,8 @@ const DeptPage = (props) => {
 
 
             <ArtButton deptList={props.deptList} onClick={props.onClick} />
+            <ArtButton deptList={props.deptList} onClick={props.onClick} />
+            <ArtButton deptList={props.deptList} onClick={props.onClick} />
             
         </div>
     )
