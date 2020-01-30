@@ -60,6 +60,17 @@ h2 {
 
 /* ------ MAIN (home) AND A BIT OF DEPT PAGE ------ */
 
+.loading {
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  padding-top: 30%;
+  height: 100%;
+  width: 85%;
+  color: rgb(189, 189, 189);
+  background-color: white;
+}
+
 .dept-list {
   margin: 5vw;
   display: grid;
