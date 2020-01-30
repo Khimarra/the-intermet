@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import { getObjByDept } from '../services/apiHelper'
 
-const ArtButton = (props) => {
-
-    console.log(useParams())
+const ArtCard = (props) => {
 
     const deptIndex = useParams().dept_index
     const deptId = props.deptList.departments[deptIndex].departmentId
@@ -20,9 +18,8 @@ const ArtButton = (props) => {
     }
 
     return (
-        <div className='art-button'>
-            <h1>Art Button</h1>
-            <NavLink className='art-cards' exact to={`/ArtPage/${objects.objectID}`} objectinfo={objects} onClick={() => { props.onClick(objects) }}>
+        <div className='art-cards'>
+            <NavLink exact to={`/ArtPage/${objects.objectID}`} objectinfo={objects} onClick={() => { props.onClick(objects) }}>
 
                 <div className='dp-image-container'>
                     <img src={`${objects && objects.primaryImage}`} alt='' className='dept-images' />
@@ -41,4 +38,4 @@ const ArtButton = (props) => {
     )
 }
 
-export default ArtButton
+export default ArtCard

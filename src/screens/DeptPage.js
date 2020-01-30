@@ -1,20 +1,22 @@
 import React from 'react'
-import ArtButton from '../components/ArtButton'
+import ArtCard from '../components/ArtCard'
 
 const DeptPage = (props) => {
 
+    const deptIndex = props.match.params.dept_index
+
     return (
-        <div className='dept-page-images'>
-            <h1>Dept Page</h1>
 
-            {/* component={(navProps) => (
-              <DeptPage {...navProps} deptList={this.state.departmentList} onClick={this.handleNavToArtDetails} />
-          )} */}
+        <div>
+            <h2 className='dept-title'>{props.deptList.departments[deptIndex].displayName}</h2>
 
+            <div className='dept-grid'>
 
-            <ArtButton deptList={props.deptList} onClick={props.onClick} />
-            <ArtButton deptList={props.deptList} onClick={props.onClick} />
-            <ArtButton deptList={props.deptList} onClick={props.onClick} />
+                <ArtCard deptList={props.deptList} onClick={props.onClick} />
+                <ArtCard deptList={props.deptList} onClick={props.onClick} />
+                <ArtCard deptList={props.deptList} onClick={props.onClick} />
+
+            </div>
             
         </div>
     )

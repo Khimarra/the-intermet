@@ -36,94 +36,97 @@ const ArtDetails = (props) => {
                 </div>
 
                 <table className="info-table">
-                    <tr>
-                        <td>Title</td>
-                        <td>{props.objDetails && props.objDetails.title}</td>
-                    </tr>
-                    <tr>
-                        <td>Medium</td>
-                        <td>
-                            {(props.objDetails && props.objDetails.medium) ?
-                            (props.objDetails && props.objDetails.medium) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Dimensions</td>
-                        <td>
-                            {(props.objDetails && props.objDetails.dimensions) ?
-                            (props.objDetails && props.objDetails.dimensions) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Date Created</td>
-                        <td>
-                            {(props.objDetails && props.objDetails.objectDate) ?
-                            (props.objDetails && props.objDetails.objectDate) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Associated Culture</td>
-                        <td>
-                            {(props.objDetails && props.objDetails.culture) ?
-                            (props.objDetails && props.objDetails.culture) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Credits</td>
-                        <td>
-                            {(props.objDetails && props.objDetails.creditLine) ?
-                            (props.objDetails && props.objDetails.creditLine) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Current Location</td>
-                        <td>
-                            {(props.objDetails && props.objDetails.repository) ?
-                            (props.objDetails && props.objDetails.repository) :
-                            ('')}
-                        </td>
-                    </tr>
-
+                    <tbody>
+                        <tr>
+                            <td>Title</td>
+                            <td>{props.objDetails && props.objDetails.title}</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>
+                                {(props.objDetails && props.objDetails.medium) ?
+                                (props.objDetails && props.objDetails.medium) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dimensions</td>
+                            <td>
+                                {(props.objDetails && props.objDetails.dimensions) ?
+                                (props.objDetails && props.objDetails.dimensions) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date Created</td>
+                            <td>
+                                {(props.objDetails && props.objDetails.objectDate) ?
+                                (props.objDetails && props.objDetails.objectDate) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Associated Culture</td>
+                            <td>
+                                {(props.objDetails && props.objDetails.culture) ?
+                                (props.objDetails && props.objDetails.culture) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Credits</td>
+                            <td>
+                                {(props.objDetails && props.objDetails.creditLine) ?
+                                (props.objDetails && props.objDetails.creditLine) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Current Location</td>
+                            <td>
+                                {(props.objDetails && props.objDetails.repository) ?
+                                (props.objDetails && props.objDetails.repository) :
+                                ('')}
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
 
                 <table className="artist-table">
-                    <tr>
-                        <td>Artist</td>
-                        <td>
-                            {(props.objDetails && props.objDetails.artistDisplayName) ?
-                            (props.objDetails && props.objDetails.artistDisplayName) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Bio</td>
-                        <td>
-                            {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistDisplayBio)) ?
-                            (props.objDetails && props.objDetails.artistDisplayBio) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Born</td>
-                        <td>
-                            {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistBeginDate)) ?
-                            (props.objDetails && props.objDetails.artistBeginDate) :
-                            ('')}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Died</td>
-                        <td>
-                            {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistEndDate)) ?
-                            (props.objDetails && props.objDetails.artistEndDate) :
-                            ('')}
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Artist</td>
+                            <td>
+                                {(props.objDetails && props.objDetails.artistDisplayName) ?
+                                (props.objDetails && props.objDetails.artistDisplayName) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bio</td>
+                            <td>
+                                {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistDisplayBio)) ?
+                                (props.objDetails && props.objDetails.artistDisplayBio) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Born</td>
+                            <td>
+                                {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistBeginDate)) ?
+                                (props.objDetails && props.objDetails.artistBeginDate) :
+                                ('')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Died</td>
+                            <td>
+                                {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistEndDate)) ?
+                                (props.objDetails && props.objDetails.artistEndDate) :
+                                ('')}
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
                 <h5>Object ID: {objectID}</h5>
 
