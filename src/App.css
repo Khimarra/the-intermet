@@ -53,6 +53,8 @@ h2 {
   text-align: center;
 }
 
+
+
 /* ------ MAIN (home) AND A BIT OF DEPT PAGE ------ */
 
 .dept-list {
@@ -119,6 +121,14 @@ h2 {
 
 /* ------ ART DETAILS ------ */
 
+.art-title {
+  width: 85vw;
+  text-align: center;
+  margin: auto;
+  margin-top: 5vw;
+  font-size: 6vw;
+}
+
 .art-details {
   text-align: center;  
 }
@@ -128,28 +138,28 @@ h2 {
 }
 
 h4 {
-  font-size: 6vw;
+  font-size: 4vw;
 }
 
-/* .info-grid {
-  display: grid;
-  grid-template-columns: 30vw 66vw;
-  margin: 2vw;
-}
-
-.info-grid ul {
-  padding: 0;
-}
-
-.info-grid li {
-  display: grid;
-  grid-template-rows: 30vw;
+table {
+  margin: 5vw auto;
+  border: 4px solid rgb(194, 194, 194);
+  box-shadow: 0 0 5px rgb(194, 194, 194);
+  background-color: rgb(231, 231, 231);
+  width: 85vw;
   text-align: left;
-  font-size: 5vw;
-  border: 1px solid rgb(173, 173, 173);
-  list-style-type: none;
-  padding: 1vw;
-} */
+  border-collapse: collapse;
+}
+
+tr:hover {
+  background-color: rgba(201, 16, 41, 0.096);
+}
+
+td {
+  border: 1px solid rgb(189, 189, 189);
+  padding: 3vw 2vw;
+  font-size: 4vw;
+}
 
 
 

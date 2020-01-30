@@ -36,7 +36,7 @@ const ArtDetails = (props) => {
             
             <img className="primary-image" src={`${(props.objDetails && props.objDetails.primaryImage) ? (props.objDetails && props.objDetails.primaryImage) : ("../images/No_Image_Available.png")}`} alt='' />
 
-            <table className="info-grid">
+            <table className="info-table">
                 <tr>
                     <td>Title</td>
                     <td>{props.objDetails && props.objDetails.title}</td>
@@ -90,53 +90,41 @@ const ArtDetails = (props) => {
                     </td>
                 </tr>
 
-                <ul className="right-info-list">
+            </table>
 
-
-
-
-
-
-                </ul>
-
-                <ul className="left-artist-bio">
-                    <li>Artist</li>
-                    <li>Bio</li>
-                    <li>Born</li>
-                    <li>Died</li>
-                </ul>
-
-                <ul className="right-artist-bio">
-                    <li>
-                        {
-                            (props.objDetails && props.objDetails.artistDisplayName) ?
-                            (props.objDetails && props.objDetails.artistDisplayName) :
-                            ('')
-                        }
-                    </li>
-                    <li>
-                        {
-                            ((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistDisplayBio)) ?
-                            (props.objDetails && props.objDetails.artistDisplayBio) :
-                            ('')
-                        }
-                    </li>
-                    <li>
-                        {
-                            ((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistBeginDate)) ?
-                            (props.objDetails && props.objDetails.artistBeginDate) :
-                            ('')
-                        }
-                    </li>
-                    <li>
-                        {
-                            ((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistEndDate)) ?
-                            (props.objDetails && props.objDetails.artistEndDate) :
-                            ('')
-                        }
-                    </li>
-                </ul>
-                
+            <table className="artist-table">
+                <tr>
+                    <td>Artist</td>
+                    <td>
+                        {(props.objDetails && props.objDetails.artistDisplayName) ?
+                        (props.objDetails && props.objDetails.artistDisplayName) :
+                        ('')}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bio</td>
+                    <td>
+                        {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistDisplayBio)) ?
+                        (props.objDetails && props.objDetails.artistDisplayBio) :
+                        ('')}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Born</td>
+                    <td>
+                        {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistBeginDate)) ?
+                        (props.objDetails && props.objDetails.artistBeginDate) :
+                        ('')}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Died</td>
+                    <td>
+                        {((props.objDetails && props.objDetails.artistDisplayName) && (props.objDetails && props.objDetails.artistEndDate)) ?
+                        (props.objDetails && props.objDetails.artistEndDate) :
+                        ('')}
+                    </td>
+                </tr>
             </table>
             <h5>Object ID: {objectID}</h5>
 
