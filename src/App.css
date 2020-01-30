@@ -169,6 +169,18 @@ td {
 
 
 
+/* ------ METLINK ------ */
+
+.link-table tr {
+  width: 85vw;
+}
+
+.met-link {
+  overflow: scroll;
+}
+
+
+
 /* ------ FOOTER ------ */
 
 .footer {
@@ -257,6 +269,11 @@ td {
   td {
     font-size: 2vw;
     padding: 2vw 1.5vw;
+  }
+
+  .link-table tr {
+    flex-direction: row;
+    border: none;  
   }
 
   .footer {
