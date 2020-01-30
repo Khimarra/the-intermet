@@ -73,9 +73,9 @@
 
 ##### PostMVP additions are in purple
 
-![Home Wireframe](images/HomeWireframe.png)
-![Department Wireframe](images/DepartmentWireframe.png)
-![Art Details Wireframe](images/ArtDetailsWireframe.png)
+![Home Wireframe](public/images/HomeWireframe.png)
+![Department Wireframe](public/images/DepartmentWireframe.png)
+![Art Details Wireframe](public/images/ArtDetailsWireframe.png)
 
 ### MVP - DONE
 
