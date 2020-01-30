@@ -173,14 +173,35 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Code Snippet
 
-Use this section to include a brief code snippet you are proud of, along with a brief description of why.
+I had to lift state in order to get the correct art piece to link from DeptPage to ArtDetails, which means the link info required an onClick in order to send the info back down. This means that the only way to get to a specific art piece's details, the only way to get there was through the link. I wanted to make it possible to have ArtDetails render through a specific URL, or by refreshing the page. This was the solution:
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+    if(props.objDetails) {
+        return(
+            <div>
+                ... (all of my ArtDetails.js info goes here) ...
+            </div>
+        )
+
+    } else {
+
+        return(
+            <Route
+                exact
+                path='/ArtPage/:obj_index'
+                component={(navProps) => (
+              <div>
+                <ArtDetails {...navProps} objDetails={newObject} />
+              </div>
+            )}
+          />
+        )
+    }
 ```
+
+It basically says if props have been passed down via the onClick in the route, it will return all of the specific info for the piece shown in the link. If there are no props, a new API call is made in order to return a new random piece.
 
 ## Change Log
 
 - I originally wanted to get all of the objects from each specific department in my main API call, but due to how the API is structured, I can't do that. I ended up cheating the request a bit with a query for the word "the" in order to return the maximum amount of objects possible with a single query.
+- I originally planned on having components called ArtButton and DeptButton. In the process of making Main and creating all of the links by mapping through the department IDs and making multiple API calls in order to render a single link, I ended up not using the DeptButton component. I then decided not to use ArtButton either, because I thought I would have the same trouble with it, but then realized Promise.all wouldn't even be necessary in that instance, so I went back to my original plan of using the ArtButton (renamed ArtCard). In hindsight, using the DeptButton from the start may have made my async issues less problematic. (Or I would have had to do the exact same logic, just in a different place, I'm honestly not sure.)
