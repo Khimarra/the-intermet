@@ -28,6 +28,17 @@ const Main = (props) => {
             <div className='dept-list'>
                 
                 {props.deptList.departments && props.deptList.departments.map((department, index) => {
+                    
+                    if(Object.keys(objects).length == 0) {
+                        return (
+                            <div className="dept-cards">
+                                <div className='image-container'>
+                                    <h4>Loading...</h4>
+                                </div>
+                            </div>
+                        )
+                    }
+
                     return (
                         <NavLink key={index} exact to={`/DeptPage/${index}`}>
                             <div className="dept-cards">

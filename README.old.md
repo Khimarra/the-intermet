@@ -77,21 +77,21 @@
 ![Department Wireframe](images/DepartmentWireframe.png)
 ![Art Details Wireframe](images/ArtDetailsWireframe.png)
 
-### MVP
+### MVP - DONE
 
 - Get data from Met API - DONE
 - Make home page with a randomly generated image and title of art piece, one for each department (there are 20) - DONE
 - Make department page component, similar to home, but with links to specific pieces - DONE
-- Render data about specific art piece on separate page, linked from image on department page
+- Render data about specific art piece on separate page, linked from image on department page - DONE
 - Set up router so links actually link to things - DONE
-- Styling with at least one media query
+- Styling with at least one media query - DONE
 
 #### PostMVP EXAMPLE:
 
 - Add search function so users can search through whole collection
 - Implement search function in each department page so users can search within each department
 - Update styling with SASS
-- Re-write class components as functional
+- Re-write class components as functional - DONE except for App.js
 - Add local storage with list of links to recently viewed pieces
 - Make a loading bar for when things are taking too long to load
 - Add an external links section with links to the Met's website and the piece's specific URL
@@ -101,6 +101,7 @@
 - Make links so when user clicks on an image, it gives them the full-size image.
 - Figure out how to deal with the fact that a few of the object titles in the API have HTML tags in them. 
 - In artist bio, make array of info to be returned. then map through with a turnary instead of manually doing a turnary on each line.
+- Utilize Animate CSS library
 
 ## React Component Hierarchy
 
@@ -130,15 +131,15 @@
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| API Calls | H | 3hrs | 2hrs | 0hrs |
-| Working with API | H | 10hrs | 4hrs | 0hrs |
-| Home Page | H | 4hrs| 0.5hrs | 0hrs |
-| Department Page | M | 4hrs| 0.5hrs | 0hrs |
-| Art Page | M | 4hrs | 0.5hrs | 0hrs |
+| API Calls | H | 3hrs | 3hrs | 0hrs |
+| Working with API | H | 10hrs | 11hrs | 0hrs |
+| Home Page | H | 4hrs| 2hrs | 0hrs |
+| Department Page | M | 4hrs| 2hrs | 0hrs |
+| Art Page | M | 4hrs | 2hrs | 0hrs |
 | Routing | H | 3hrs | 2hrs | 0hrs |
-| Styling | M | 10hrs | 0.5hrs | 0hrs |
+| Styling | M | 10hrs | 5hrs | 0hrs |
 | PostMVP | L | 0hrs | 0hrs | 0hrs |
-| Total | H | 38hrs| 12hrs | 0hrs |
+| Total | H | 38hrs| 27hrs | 0hrs |
 
 ## Project Schedule
 
@@ -152,7 +153,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Jan 27th| Pseudocode, Core Application Structure, Component files made | Complete
 |Jan 28th| Actual code: routing, rendering data from API | Complete
 |Jan 29th| Initial clickable model: all routes working, images rendering | Incomplete
-|Jan 30th| MVP | Incomplete
+|Jan 30th| MVP | Complete
 |Jan 31tst| Present | Incomplete
 
 ## Additional Libraries
@@ -162,10 +163,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Issues and Resolutions
 
-- The Met's API has some limitations on endpoints, so I already had to tweak my original plan of what pieces to display. 
-- Not every piece has images, so in those cases I plan to load in a default "no image available" image
-- I want to implement a loading bar but I don't know how, yet. Will probably have to do some googling.
-- Rendering info to the art details page after linking from specific pieces on the department page required lifting state (which means I can't link directly to an object without clicking on the link in department page. Will address this in PostMVP).
+- The Met's API has some limitations on endpoints, so I already had to tweak my original plan of what pieces to display. I wanted to display pieces filtered by department, whether they're on display, and whether they're highlights, but the endpoint that allows me to filter by any of these keys requires a query. I tested a bunch of different query words and single letters, and ended up using the word "the" because it returns the most data of everything I tried (about a quarter of the total data). I am still able to render all of the pieces on the art page by refreshing or typing in a specific object number in the URL, I just can't get them while filtering.
+- Not every piece has images, so in those cases I loaded in a default "no image available" image. In the process, I learned that the "images" folder needs to be in "public," not "src."
+- Rendering info to the art details page after linking from specific pieces on the department page required lifting state, which means I can't link directly to an object without clicking on the link in department page. Ended up making a second API call on that page so if it didn't get props passed down directly from the onClick, it will render a random piece.
+- I want to implement a loading bar but I don't know how, yet. Will probably have to do some googling. I did end up making a "please wait" message for now by using an if statement. It basically says if the data hasn't loaded, render "Please wait..." 
 
 ## Code Snippet
 

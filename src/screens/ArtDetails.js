@@ -5,8 +5,6 @@ import { Route } from 'react-router-dom'
 const ArtDetails = (props) => {
 
     const [newObject, setNewObject] = useState([])
-    const image = props.objDetails && props.objDetails.primaryImage
-    const defaultImage = 'images/No_Image_Available.png'
 
     useEffect(() => {
         objDetails()
