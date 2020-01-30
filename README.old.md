@@ -86,22 +86,23 @@
 - Set up router so links actually link to things - DONE
 - Styling with at least one media query - DONE
 
-#### PostMVP EXAMPLE:
+#### PostMVP:
 
+- Make new API call from art details page so data will render without the onClick - DONE
+- Re-write class components as functional - DONE except for App.js
 - Add search function so users can search through whole collection
 - Implement search function in each department page so users can search within each department
 - Update styling with SASS
-- Re-write class components as functional - DONE except for App.js
 - Add local storage with list of links to recently viewed pieces
 - Make a loading bar for when things are taking too long to load
 - Add an external links section with links to the Met's website and the piece's specific URL
 - Add an aside to art page with links to additional images (if available)
 - Add an aside to department page with links to other departments
-- Make new API call from art details page so data will render without the onClick
 - Make links so when user clicks on an image, it gives them the full-size image.
 - Figure out how to deal with the fact that a few of the object titles in the API have HTML tags in them. 
 - In artist bio, make array of info to be returned. then map through with a turnary instead of manually doing a turnary on each line.
-- Utilize Animate CSS library
+- Utilize Animate.CSS library
+- Refactor DeptPage using Promise.all to make code DRYer
 
 ## React Component Hierarchy
 

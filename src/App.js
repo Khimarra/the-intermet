@@ -67,7 +67,7 @@ class App extends React.Component {
 
         <Route
           exact
-          path='/DeptPage/:dept_index'
+          path='/ArtButton/:dept_index'
           component={(navProps) => (
               <DeptPage {...navProps} deptList={this.state.departmentList} onClick={this.handleNavToArtDetails} />
           )}
