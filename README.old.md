@@ -90,6 +90,8 @@
 
 - Make new API call from art details page so data will render without the onClick - DONE
 - Re-write class components as functional - DONE except for App.js
+- Refactor DeptPage - DONE
+
 - Add search function so users can search through whole collection
 - Implement search function in each department page so users can search within each department
 - Update styling with SASS
@@ -102,7 +104,6 @@
 - Figure out how to deal with the fact that a few of the object titles in the API have HTML tags in them. 
 - In artist bio, make array of info to be returned. then map through with a turnary instead of manually doing a turnary on each line.
 - Utilize Animate.CSS library
-- Refactor DeptPage using Promise.all to make code DRYer
 
 ## React Component Hierarchy
 
@@ -135,12 +136,12 @@
 | API Calls | H | 3hrs | 3hrs | 0hrs |
 | Working with API | H | 10hrs | 11hrs | 0hrs |
 | Home Page | H | 4hrs| 2hrs | 0hrs |
-| Department Page | M | 4hrs| 2hrs | 0hrs |
+| Department Page | M | 4hrs| 6hrs | 0hrs |
 | Art Page | M | 4hrs | 2hrs | 0hrs |
 | Routing | H | 3hrs | 2hrs | 0hrs |
 | Styling | M | 10hrs | 5hrs | 0hrs |
 | PostMVP | L | 0hrs | 0hrs | 0hrs |
-| Total | H | 38hrs| 27hrs | 0hrs |
+| Total | H | 38hrs| 31hrs | 0hrs |
 
 ## Project Schedule
 
@@ -153,7 +154,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Jan 24th| Project pitch, wireframes, priority matrix, component heirarchy | Complete
 |Jan 27th| Pseudocode, Core Application Structure, Component files made | Complete
 |Jan 28th| Actual code: routing, rendering data from API | Complete
-|Jan 29th| Initial clickable model: all routes working, images rendering | Incomplete
+|Jan 29th| Initial clickable model: all routes working, images rendering | Complete
 |Jan 30th| MVP | Complete
 |Jan 31tst| Present | Incomplete
 
@@ -168,6 +169,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 - Not every piece has images, so in those cases I loaded in a default "no image available" image. In the process, I learned that the "images" folder needs to be in "public," not "src."
 - Rendering info to the art details page after linking from specific pieces on the department page required lifting state, which means I can't link directly to an object without clicking on the link in department page. Ended up making a second API call on that page so if it didn't get props passed down directly from the onClick, it will render a random piece.
 - I want to implement a loading bar but I don't know how, yet. Will probably have to do some googling. I did end up making a "please wait" message for now by using an if statement. It basically says if the data hasn't loaded, render "Please wait..." 
+- I was originally rendering my DeptPage (with 3 art pieces) by repeating myself 3 times. I thought I could fix this by using Promise.all like in my Main, but realized the easier way to solve this particular issue, since nothing was being mapped, was to simply move the functionality into an ArtCard component (which I had originally planned for with my ArtButton component, and then chose not to make that component) and call the ArtCard three times in the DeptPage component.
 
 ## Code Snippet
 
