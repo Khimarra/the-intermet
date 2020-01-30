@@ -174,8 +174,9 @@ td {
 }
 
 
-
+/* -------------------------- */
 /* ------ TABLET SIZES ------ */
+/* -------------------------- */
 
 @media only screen and (min-width: 600px) {
 
@@ -214,6 +215,17 @@ td {
     height: 30vw;
   }
 
+  .dept-grid {
+      margin: 2.5vw;
+      grid-template-columns: 30vw 30vw 30vw;
+      grid-template-rows: auto;
+      grid-gap: 2.5vw;
+    }
+  
+  .dp-image-container {
+    height: 35vw;
+  }
+
   .footer {
     height: 12vw;
     padding-top: .7vw;
@@ -222,7 +234,14 @@ td {
 
 }
 
+
+/* --------------------------- */
+/* ------ DESKTOP SIZES ------ */
+/* --------------------------- */
+
 @media only screen and (min-width: 900px) {
+
+  /* ------ MAIN (home) ------ */
 
   header {
     padding-top: 3vw;
