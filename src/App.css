@@ -28,13 +28,16 @@ header h1 {
   padding-left: .8vw;
   position: absolute;
   margin-left: 2vw;
-  font-size: 4vw;
   height: 20vw;
   color: black;
   background-color: white;
   border: 2px solid black;
   width: 19.2vw;
   box-shadow: 0 0 10px rgb(121, 121, 121);
+}
+
+h4 {
+  font-size: 4vw;
 }
 
 a:link {
@@ -137,10 +140,6 @@ h2 {
   width: 75vw;
 }
 
-h4 {
-  font-size: 4vw;
-}
-
 table {
   margin: 5vw auto;
   border: 4px solid rgb(194, 194, 194);
@@ -180,18 +179,104 @@ td {
 
 @media only screen and (min-width: 600px) {
 
+  header {
+    padding-top: 4vw;
+    height: 24vw;
+  }
+
+  .nav {
+    padding-left: .8vw;
+    height: 16vw;
+    width: 15.2vw;
+  }
+
+  header h1 {
+    font-size: 6.5vw;
+  }
+  
+  h4 {
+    font-size: 3vw;
+  }
+
+  .dept-name, .object-name, .artist-name {
+    font-size: 2vw;
+  }  
+
+  .dept-list {
+    margin: 5.5vw;
+    grid-template-columns: 27vw 27vw 27vw;
+    grid-template-rows: 40vw 40vw 40vw 40vw 40vw 40vw 40vw;
+    grid-gap: 4vw;
+  }
+
+  .image-container {
+    position: relative;
+    height: 30vw;
+  }
+
+  .footer {
+    height: 12vw;
+    padding-top: .7vw;
+    font-size: 1.7vw;
+  }
 
 }
 
 @media only screen and (min-width: 900px) {
 
-  .dept-cards {
-    transition: all .2s;
+  header {
+    padding-top: 3vw;
+    height: 15vw;
+  }
+
+  .nav {
+    padding-left: .8vw;
+    height: 13vw;
+    width: 12.2vw;
+  }
+
+  .nav:hover {
+    background: radial-gradient(circle, rgb(255, 255, 255) 25%, rgb(212, 212, 212) 100%);
+  }
+
+  header h1 {
+    font-size: 4vw;
+  }
+
+  h4 {
+    font-size: 2.5vw;
+  }
+
+  .dept-name, .object-name, .artist-name {
+    font-size: 1.5vw;
+  }  
+
+  .dept-list {
+    margin: 2.5vw;
+    grid-template-columns: 17vw 17vw 17vw 17vw 17vw;
+    grid-template-rows: 25vw 25vw 25vw 25vw;
+    grid-gap: 2.5vw;
+  }
+
+  .dept-cards, .art-cards {
+    transition: all .4s;
   }
   
   .dept-cards:hover, .art-cards:hover {
     box-shadow: 0 0 10px rgb(121, 121, 121);
     transform: scale(1.05);
   }
+
+  .image-container {
+    position: relative;
+    height: 18vw;
+  }
+
+  .footer {
+    height: 7vw;
+    padding-top: .3vw;
+    font-size: 1vw;
+  }
+
 
 }
