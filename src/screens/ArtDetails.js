@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getObjDetails } from '../services/apiHelper'
 import { Route } from 'react-router-dom'
+import MetLink from '../components/MetLink'
 
 const ArtDetails = (props) => {
 
@@ -129,6 +130,8 @@ const ArtDetails = (props) => {
                     </tbody>
                 </table>
                 <h5>Object ID: {objectID}</h5>
+
+                <MetLink objDetails={props.objDetails} />
 
             </div>
         )
