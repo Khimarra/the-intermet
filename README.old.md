@@ -107,7 +107,7 @@
 
 ## React Component Hierarchy
 
-![Component Heirarchy](images/ComponentHeirarchy.png)
+![Component Heirarchy](public/images/ComponentHeirarchy.png)
 
 ## Components
 
