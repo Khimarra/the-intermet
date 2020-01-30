@@ -171,14 +171,9 @@ td {
 
 /* ------ METLINK ------ */
 
-.link-table tr {
-  width: 85vw;
+.link-table {
+  display: none;
 }
-
-.met-link {
-  overflow: scroll;
-}
-
 
 
 /* ------ FOOTER ------ */
@@ -187,9 +182,18 @@ td {
   background-color: rgb(201, 16, 41);
   color: white;
   text-align: center;
-  height: 15vw;
+  height: 25vw;
   padding-top: 1vw;
   font-size: 2vw;
+}
+
+.api-link, .icons {
+  color: white;
+}
+
+.icons {
+  font-size: 8vw;
+  padding: 0 1vw;
 }
 
 
@@ -271,15 +275,23 @@ td {
     padding: 2vw 1.5vw;
   }
 
+  .link-table {
+    display: table;
+  }
+
   .link-table tr {
     flex-direction: row;
     border: none;  
   }
 
   .footer {
-    height: 12vw;
+    height: 23vw;
     padding-top: .7vw;
     font-size: 1.7vw;
+  }
+
+  .icons {
+    font-size: 5vw;
   }
 
 }
@@ -363,9 +375,18 @@ td {
   }
 
   .footer {
-    height: 7vw;
+    height: 12vw;
     padding-top: .3vw;
     font-size: 1vw;
+  }
+
+  .icons {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .api-link:hover, .icons:hover {
+    color: rgb(134, 134, 134);
   }
 
 

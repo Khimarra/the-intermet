@@ -2,8 +2,6 @@ import React from 'react'
 
 const MetLink = (props) => {
 
-    console.log(props.objDetails)
-
     return(
 
         <div>
