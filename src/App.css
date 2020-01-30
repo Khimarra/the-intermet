@@ -124,7 +124,7 @@ h2 {
 
 /* ------ ART DETAILS ------ */
 
-.art-title {
+.art-title, .department-title {
   width: 85vw;
   text-align: center;
   margin: auto;
@@ -148,10 +148,6 @@ table {
   width: 85vw;
   text-align: left;
   border-collapse: collapse;
-}
-
-tr:hover {
-  background-color: rgba(201, 16, 41, 0.096);
 }
 
 td {
@@ -226,6 +222,34 @@ td {
     height: 35vw;
   }
 
+  .art-title, .department-title {
+    font-size: 4vw;
+  }
+
+  .art-details h4 {
+    font-size: 2vw;
+  }
+
+  /* .primary-image-container {
+    display: inline-block;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
+  } */
+
+  .primary-image {
+    height: auto;
+    max-height: 90vh;
+    width: auto;
+    max-width: 90vw;
+    border: 3vw solid white;
+    box-shadow: 0 0 10px rgb(189, 189, 189);
+  }
+
+  td {
+    font-size: 2vw;
+    padding: 2vw 1.5vw;
+  }
+
   .footer {
     height: 12vw;
     padding-top: .7vw;
@@ -289,6 +313,23 @@ td {
   .image-container {
     position: relative;
     height: 18vw;
+  }
+
+  .art-title, .department-title {
+    font-size: 2vw;
+  }
+
+  .art-details h4 {
+    font-size: 1.4vw;
+  }
+
+  tr:hover {
+    background-color: rgba(201, 16, 41, 0.096);
+  }  
+
+  td {
+    font-size: 1.2vw;
+    padding: 1.5vw 1vw;
   }
 
   .footer {
