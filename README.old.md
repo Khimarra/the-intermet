@@ -127,7 +127,7 @@
 
 ## Priority Matrix
 
-![Component Heirarchy](images/PriorityMatrix.png)
+![Component Heirarchy](public/images/PriorityMatrix.png)
 
 ## Timeframes
 
@@ -140,8 +140,8 @@
 | Art Page | M | 4hrs | 2hrs | 2hrs |
 | Routing | H | 3hrs | 2hrs | 2hrs |
 | Styling | M | 10hrs | 10hrs | 10hrs |
-| PostMVP | L | 0hrs | 5hrs | 5hrs |
-| Total | H | 38hrs| 41hrs | 41hrs |
+| PostMVP | L | 0hrs | 8hrs | 8hrs |
+| Total | H | 38hrs| 44hrs | 44hrs |
 
 ## Project Schedule
 
