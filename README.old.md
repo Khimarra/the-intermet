@@ -133,15 +133,15 @@
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| API Calls | H | 3hrs | 3hrs | 0hrs |
-| Working with API | H | 10hrs | 11hrs | 0hrs |
-| Home Page | H | 4hrs| 2hrs | 0hrs |
-| Department Page | M | 4hrs| 6hrs | 0hrs |
-| Art Page | M | 4hrs | 2hrs | 0hrs |
-| Routing | H | 3hrs | 2hrs | 0hrs |
-| Styling | M | 10hrs | 5hrs | 0hrs |
-| PostMVP | L | 0hrs | 0hrs | 0hrs |
-| Total | H | 38hrs| 31hrs | 0hrs |
+| API Calls | H | 3hrs | 3hrs | 3hrs |
+| Working with API | H | 10hrs | 11hrs | 11hrs |
+| Home Page | H | 4hrs| 2hrs | 2hrs |
+| Department Page | M | 4hrs| 6hrs | 6hrs |
+| Art Page | M | 4hrs | 2hrs | 2hrs |
+| Routing | H | 3hrs | 2hrs | 2hrs |
+| Styling | M | 10hrs | 10hrs | 10hrs |
+| PostMVP | L | 0hrs | 5hrs | 5hrs |
+| Total | H | 38hrs| 41hrs | 41hrs |
 
 ## Project Schedule
 
@@ -168,8 +168,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 - The Met's API has some limitations on endpoints, so I already had to tweak my original plan of what pieces to display. I wanted to display pieces filtered by department, whether they're on display, and whether they're highlights, but the endpoint that allows me to filter by any of these keys requires a query. I tested a bunch of different query words and single letters, and ended up using the word "the" because it returns the most data of everything I tried (about a quarter of the total data). I am still able to render all of the pieces on the art page by refreshing or typing in a specific object number in the URL, I just can't get them while filtering.
 - Not every piece has images, so in those cases I loaded in a default "no image available" image. In the process, I learned that the "images" folder needs to be in "public," not "src."
 - Rendering info to the art details page after linking from specific pieces on the department page required lifting state, which means I can't link directly to an object without clicking on the link in department page. Ended up making a second API call on that page so if it didn't get props passed down directly from the onClick, it will render a random piece.
-- I want to implement a loading bar but I don't know how, yet. Will probably have to do some googling. I did end up making a "please wait" message for now by using an if statement. It basically says if the data hasn't loaded, render "Please wait..." 
+- I wanted to implement a loading bar but ran out of time. I did end up making a "please wait" message for now by using an if statement. It basically says if the department names haven't loaded, render "Please wait..." and a second message pops up on the image cards while it's waiting for the images to come in from the second API call.
 - I was originally rendering my DeptPage (with 3 art pieces) by repeating myself 3 times. I thought I could fix this by using Promise.all like in my Main, but realized the easier way to solve this particular issue, since nothing was being mapped, was to simply move the functionality into an ArtCard component (which I had originally planned for with my ArtButton component, and then chose not to make that component) and call the ArtCard three times in the DeptPage component.
+- I was having trouble making my art info look nice until I remembered HTML tables exist. From there, I was having trouble styling the table, and discovered display: table exists.
 
 ## Code Snippet
 
@@ -203,5 +204,5 @@ It basically says if props have been passed down via the onClick in the route, i
 
 ## Change Log
 
-- I originally wanted to get all of the objects from each specific department in my main API call, but due to how the API is structured, I can't do that. I ended up cheating the request a bit with a query for the word "the" in order to return the maximum amount of objects possible with a single query.
-- I originally planned on having components called ArtButton and DeptButton. In the process of making Main and creating all of the links by mapping through the department IDs and making multiple API calls in order to render a single link, I ended up not using the DeptButton component. I then decided not to use ArtButton either, because I thought I would have the same trouble with it, but then realized Promise.all wouldn't even be necessary in that instance, so I went back to my original plan of using the ArtButton (renamed ArtCard). In hindsight, using the DeptButton from the start may have made my async issues less problematic. (Or I would have had to do the exact same logic, just in a different place, I'm honestly not sure.)
+- I originally wanted to get all of the objects from each specific department in my main API call, but due to how the API is structured, I can't do that. I ended up cheating the request a bit with a query for the word "the" in order to return the maximum amount of objects possible with a single query. This means that only about a quarter of the pieces in the collection are able to render on the home page and the department page, but I was able to do a random object API call for the art details, so that page has the ability to retrieve every object in the collection.
+- I originally planned on having components called ArtButton and DeptButton. In the process of making Main and creating all of the links by mapping through the department IDs and making multiple API calls in order to render a single link, I ended up not using the DeptButton component. I then decided not to use ArtButton either, because I thought I would have the same trouble with it, but then realized Promise.all wouldn't even be necessary in that instance, so I went back to my original plan of using the ArtButton (renamed ArtCard for semantic reasons). In hindsight, using the DeptButton from the start may have made my async issues less problematic. (Or I would have had to do the exact same logic, just in a different place, I'm honestly not sure.)
